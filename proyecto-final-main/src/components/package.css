@@ -1,0 +1,133 @@
+/* CONTENEDOR PRINCIPAL */
+.package {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, #e6f7ff, #ffffff);
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Calibri', sans-serif;
+  font-size: 2.5rem;
+  color: #007acc;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* WRAP FLEX PARA CARDS */
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* CARD INDIVIDUAL */
+.contenedorCard {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 2px solid #007acc;
+  width: 22rem;
+  height: 25rem; /* menos alto que antes */
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 122, 204, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Mejor alineación arriba */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenedorCard:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 122, 204, 0.3);
+}
+
+.contenedorCard h2 {
+  font-size: 1.5rem;
+  color: #007acc;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Calibri', sans-serif;
+}
+
+.contenedorCard p {
+  font-family: 'Calibri', sans-serif;
+  color: #222;           /* letra más oscura para mejor lectura */
+  margin: 0.4rem 0;
+  font-size: 1.05rem;    /* un poco más grande */
+  line-height: 1.4;
+}
+
+.contenedorCard p strong {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* PRECIO DESTACADO */
+#precio h2:last-of-type {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  color: #007acc;
+}
+
+#precio #valor{
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #007acc;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+#precio #valor strong{
+    color: white;
+}
+
+/* Solo el precio tiene fondo celeste */
+
+
+/* BOTÓN GUARDAR FAVORITO */
+.package button {
+  margin-top: 3rem;
+  padding: 0.8rem 2rem;
+  background-color: #007acc;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-family: 'Calibri', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.package button:hover {
+  background-color: #0096ff;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedorCard {
+    width: 90%;
+    min-height: auto; /* para móviles no forzar alto fijo */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
